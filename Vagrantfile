@@ -36,6 +36,10 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
 
+  # Set memory to 512
+  config.vm.customize ["modifyvm", :id, "--memory", 512]
+
+  # Shell provisioning
   config.vm.provision :shell, :path => "install-tools.sh"
   config.vm.provision :shell, :path => "install-collectd.sh"
   config.vm.provision :shell, :path => "prepackage.sh"

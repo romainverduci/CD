@@ -40,6 +40,7 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", 512]
 
   # Shell provisioning
+  config.vm.provision :shell, :path => "stop-iptables.sh"	
   config.vm.provision :shell, :path => "install-tools.sh"
   config.vm.provision :shell, :path => "install-collectd.sh"
   #config.vm.provision :shell, :path => "prepackage.sh"

@@ -25,6 +25,7 @@ Vagrant::Config.run do |config|
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
   # physical device on your network.
+  config.vm.network :adapter, 1
   config.vm.network :bridged
 
   # Forward a port from the guest to the host, which allows for outside

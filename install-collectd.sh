@@ -12,3 +12,7 @@ wget --progress=bar --output-document="$tempDir/libstatgrab-0.15-1.el6.rf.x86_64
 
 echo "Installing collectd rpm"
 yum install -y $tempDir/collectd-5.1.0-1.el6.rft.x86_64.rpm $tempDir/libstatgrab-0.15-1.el6.rf.x86_64.rpm $tempDir/perl-Collectd-5.1.0-1.el6.rft.x86_64.rpm $tempDir/perl-Regexp-Common-2010010201-2.el6.rf.noarch.rpm
+
+cp -f collectd.conf /etc/collectd.conf
+
+service collectd start

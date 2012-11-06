@@ -42,8 +42,8 @@ Vagrant::Config.run do |config|
   # Shell provisioning
   config.vm.provision :shell, :path => "install-tools.sh"
   config.vm.provision :shell, :path => "install-collectd.sh"
-  config.vm.provision :shell, :path => "prepackage.sh"
-  config.vm.provision :shell, :path => "reboot.sh"
+  #config.vm.provision :shell, :path => "prepackage.sh"
+  #config.vm.provision :shell, :path => "reboot.sh"
 
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests

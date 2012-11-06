@@ -7,6 +7,6 @@ sudo rm /etc/udev/rules.d/70-persistent-net.rules
 echo "Updating yum"
 yum update -y
 
-#echo "Cleaning yum"
-# clear yum
-#yum clean all
+echo "Cleaning yum"
+clear yum
+yum clean all
